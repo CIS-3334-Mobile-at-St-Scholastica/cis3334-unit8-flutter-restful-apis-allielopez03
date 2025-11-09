@@ -3,6 +3,7 @@ import 'ui_widgets/section_title.dart';
 import 'ui_widgets/album_section.dart';
 import 'ui_widgets/dog_section.dart';
 import 'ui_widgets/space_news_section.dart';
+import 'ui_widgets/cat_widget.dart';
 
 void main() => runApp(const MyApp());
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(title: const Text('Fetch Data Example')),
         body: ListView(
           padding: const EdgeInsets.all(12),
-          children: const [
+          children: [
             SectionTitle('🎵 Album'),
             AlbumSection(),
             Divider(height: 32),
@@ -28,6 +29,10 @@ class MyApp extends StatelessWidget {
 
             SectionTitle('🛰️ Space News'),
             SizedBox(height: 300, child: SpaceNewsSection()),
+            Divider(height: 32),
+
+            SectionTitle('🐱 Cat Fact'),
+            SizedBox(height: 150, child: CatWidget()),  // Add the cat section here
           ],
         ),
       ),
